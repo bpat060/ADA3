@@ -13,42 +13,49 @@ public class BinarySearchTree {
 
     Node node;
 
+    //constructor for the binary search tree
     public BinarySearchTree() {
         node = null;
     }
 
+    //node class for the tree
     public class Node {
 
         int value;
         Node left;
         Node right;
 
+        //setting node value
         Node(int value) {
             this.value = value;
             right = null;
             left = null;
         }
-
     }
 
+    //removing a node from the tree
     public void remove(int value) {
         node = removeItterative(node, value);
     }
 
     public Node removeItterative(Node node, int value) {
+        //if tree if empty
         if (node == null) {
             return node;
         }
-        if (value < node.value) {
+        //iterating through the tree
+        if (value < node.value) { //iterating the left subtree
             node.left = removeItterative(node.left, value);
-        } else if (value > node.value) {
+        } else if (value > node.value) { //iterating the right subtree
             node.right = removeItterative(node.right, value);
         } else {
+            //if node contains one child
             if (node.left == null) {
                 return node.right;
             } else if (node.right == null) {
                 return node.left;
             }
+            //
             node.value = minValue(node.right);
             node.right = removeItterative(node.right, node.value);
         }
@@ -56,12 +63,12 @@ public class BinarySearchTree {
     }
 
     public int minValue(Node node) {
-        int minval = node.value;
+        int minValue = node.value;
         while (node.left != null) {
-            minval = node.left.value;
+            minValue = node.left.value;
             node = node.left;
         }
-        return minval;
+        return minValue;
     }
 
     public void add(int value) {
