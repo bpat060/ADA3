@@ -9,6 +9,6 @@ package A3;
  *
  * @author Owner
  */
-public class PersistentDynamicSet {
+public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
 
 }
