@@ -375,11 +375,13 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         SortedSet<String> tree = new BinarySearchTreeGivenTemplate<String>();
         PersistentDynamicSet set = new PersistentDynamicSet((BinarySearchTreeGivenTemplate) tree);
 
-        System.out.println("Please enter 10 numbers into the Binary Search Tree: ");
+        // create an object of Scanner
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter 10 things into the binary tree: ");
 
-        for (int x = 0; x < 5; x++) {
-            // create an object of Scanner
-            Scanner input = new Scanner(System.in);
+        for (int x = 1; x < 10; x++) {
+
+            System.out.println(x + ": ");
 
             // take input from the user
             String shape = input.next();
@@ -388,24 +390,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
             set.add(shape);
         }
 
-        // build the tree
-        tree.add("cow");
-        set.add("cow");
-        tree.add("fly");
-        set.add("fly");
-        tree.add("dog");
-        set.add("dog");
-        tree.add("bat");
-        set.add("bat");
-        tree.add("fox");
-        set.add("fox");
-        tree.add("cat");
-        set.add("cat");
-        tree.add("eel");
-        set.add("eel");
-        tree.add("ant");
-        set.add("ant");
-        System.out.println("Original Tree: " + tree);
+        System.out.println("\nOriginal Tree: " + tree);
 
         System.out.println("Path Tree: ");
         set.printPath();
