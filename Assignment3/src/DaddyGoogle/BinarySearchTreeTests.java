@@ -5,10 +5,24 @@
  */
 package DaddyGoogle;
 
+import A3.BinarySearchTree;
+
 /**
  *
  * @author Sheetal
  */
-public class NewClass {
+public class BinarySearchTreeTests {
 
+    public static void main(String[] args) {
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+
+        binarySearchTree.add(7);
+        binarySearchTree.add(8);
+        binarySearchTree.add(6);
+        binarySearchTree.add(9);
+        binarySearchTree.add(3);
+        binarySearchTree.add(4);
+
+        binarySearchTree.printPath();
+    }
 }

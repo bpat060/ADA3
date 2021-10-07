@@ -5,6 +5,8 @@
  */
 package A3;
 
+import DaddyGoogle.TreeNode;
+
 /**
  *
  * @author Owner
@@ -16,6 +18,14 @@ public class BinarySearchTree {
     //constructor for the binary search tree
     public BinarySearchTree() {
         node = null;
+    }
+
+    public void printPath() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public TreeNode getRoot() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     //node class for the tree
