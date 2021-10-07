@@ -9,7 +9,7 @@ package A3;
  *
  * @author Owner
  */
-public class PersistentDynamicSet {
+public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
 
     //ANSWERS OFF DADDY GOOGLE
     public static ArrayList<Integer> printPath(TreeNode node, ArrayList<Integer> path, int value) {
