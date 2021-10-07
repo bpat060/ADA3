@@ -10,7 +10,6 @@ package A3;
  * @author Owner
  */
 import java.util.AbstractSet;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -376,6 +375,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         PersistentDynamicSet set = new PersistentDynamicSet((BinarySearchTreeGivenTemplate) tree);
         // build the tree
         tree.add("cow");
+        set.add("cow");
         tree.add("fly");
         tree.add("dog");
         tree.add("bat");
@@ -385,6 +385,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         tree.add("ant");
         System.out.println("Original Tree: " + tree);
 
+        System.out.println("Path Tree: ");
         set.printPath();
 
         tree.remove("owl");
