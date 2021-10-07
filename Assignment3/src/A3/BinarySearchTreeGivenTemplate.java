@@ -378,6 +378,9 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         tree.add("eel");
         tree.add("ant");
         System.out.println("Original Tree: " + tree);
+
+        treeprintPath();
+
         tree.remove("owl");
         tree.remove("cow");
         tree.add("owl");
@@ -397,7 +400,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
     }
 
     BinaryTreeNode getRoot() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return rootNode;
     }
 
     // inner class that represents a node in the binary tree
