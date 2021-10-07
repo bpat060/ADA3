@@ -21,7 +21,9 @@ public class PDS extends BinarySearchTreeGivenTemplate {
 
     public void printPath() {
         ArrayList<BinarySearchTreeGivenTemplate.BinaryTreeNode> path = new ArrayList<>();
-        this.printPathRecursive(rootNode, path);
+        BinaryTreeNode root = getRoot();
+
+        this.printPathRecursive(getRoot(), path);
     }
 
     public ArrayList<BinarySearchTreeGivenTemplate.BinaryTreeNode> printPathRecursive(BinarySearchTreeGivenTemplate.BinaryTreeNode root, ArrayList<BinarySearchTreeGivenTemplate.BinaryTreeNode> path) {
@@ -30,7 +32,7 @@ public class PDS extends BinarySearchTreeGivenTemplate {
             return path;
         }
 
-        path.add(root);
+        path.add(rootNode);
 
         //If node is leaf node
         if (root.getLeft() == null && root.getRight() == null) {
