@@ -23,20 +23,20 @@ public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
         ArrayList<BinaryTreeNode> path = new ArrayList<>();
     }
 
-    public void printPathRecursive(BinaryTreeNode root, ArrayList<BinaryTreeNode> path) {
-
+    public ArrayList<BinaryTreeNode> printPathRecursive(BinaryTreeNode root, ArrayList<BinaryTreeNode> path) {
         if (root == null) {
             System.out.println("Root is null");
-            path.add(root);
+            return path;
         }
 
-        //path.add(root);
+        path.add(root);
+
         //If node is leaf node
         if (root.getLeft() == null && root.getRight() == null) {
-            path.forEach(node -> System.out.print(" "
-                    + node.getValue()));
+            path.forEach(node -> System.out.print(" " + node.getValue()));
             path.remove(path.size() - 1);
             System.out.println("Root is found");
+
             /*Not a leaf node, add this node to
         path and continue traverse */
             printPathRecursive(root.getLeft(), path);
@@ -44,14 +44,17 @@ public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
 
             //Remove the root node from the path
             //path.remove(path.size() - 1);
+            return path;
         }
 
         /*Not a leaf node, add this node to
         path and continue traverse */
-        //printPathRecursive(root.getLeft(), path);
-        //printPathRecursive(root.getRight(), path);
+        printPathRecursive(root.getLeft(), path);
+        printPathRecursive(root.getRight(), path);
         //Remove the root node from the path
-        //path.remove(path.size() - 1);
+        path.remove(path.size() - 1);
+
+        return path;
     }
 
 }
