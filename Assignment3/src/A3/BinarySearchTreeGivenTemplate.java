@@ -15,6 +15,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
+import java.util.Scanner;
 import java.util.SortedSet;
 
 public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
@@ -66,7 +67,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
     }
 
     // recursive helper method that counts number of descendants of node
-    private int countNodes(BinaryTreeNode node) {
+    public int countNodes(BinaryTreeNode node) {
         if (node == null) {
             return 0;
         } else {
@@ -373,6 +374,19 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
     public static void main(String[] args) {  // create the binary search tree
         SortedSet<String> tree = new BinarySearchTreeGivenTemplate<String>();
         PersistentDynamicSet set = new PersistentDynamicSet((BinarySearchTreeGivenTemplate) tree);
+
+        System.out.println("Please enter 10 numbers into the Binary Search Tree: ");
+
+        for (int x = 0; x < 5; x++) {
+            // create an object of Scanner
+            Scanner input = new Scanner(System.in);
+
+            // take input from the user
+            String shape = input.next();
+
+            tree.add(shape);
+            set.add(shape);
+        }
 
         // build the tree
         tree.add("cow");
