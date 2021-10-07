@@ -13,7 +13,13 @@ import java.util.ArrayList;
  */
 public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
 
-    public void printPath(BinarySearchTreeGivenTemplate tree) {
+    BinarySearchTreeGivenTemplate tree;
+
+    PersistentDynamicSet(BinarySearchTreeGivenTemplate tree) {
+        tree = this.tree;
+    }
+
+    public void printPath() {
         ArrayList<BinaryTreeNode> path = new ArrayList<>();
         this.printPathRecursive(tree.getRoot(), path);
     }
