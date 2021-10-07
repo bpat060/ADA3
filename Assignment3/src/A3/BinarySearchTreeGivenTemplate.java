@@ -396,6 +396,10 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         System.out.println("last element in subtree: " + subtree.last());
     }
 
+    BinaryTreeNode getRoot() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     // inner class that represents a node in the binary tree
     // where each node consists of the element and links to
     // left child and right child (no need for link to parent)
@@ -408,6 +412,30 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
             this.element = element;
             leftChild = null;
             rightChild = null;
+        }
+
+        public E getValue() {
+            return this.element;
+        }
+
+        public BinaryTreeNode getRight() {
+            return this.rightChild;
+        }
+
+        public BinaryTreeNode getLeft() {
+            return this.leftChild;
+        }
+
+        public void setValue(E value) {
+            this.element = value;
+        }
+
+        public void setRight(BinaryTreeNode node) {
+            this.rightChild = node;
+        }
+
+        public void setLeft(BinaryTreeNode node) {
+            this.leftChild = node;
         }
 
         // returns a string representation of the node and
