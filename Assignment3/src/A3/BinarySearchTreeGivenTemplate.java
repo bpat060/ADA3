@@ -373,16 +373,24 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
     public static void main(String[] args) {  // create the binary search tree
         SortedSet<String> tree = new BinarySearchTreeGivenTemplate<String>();
         PersistentDynamicSet set = new PersistentDynamicSet((BinarySearchTreeGivenTemplate) tree);
+
         // build the tree
         tree.add("cow");
         set.add("cow");
         tree.add("fly");
+        set.add("fly");
         tree.add("dog");
+        set.add("dog");
         tree.add("bat");
+        set.add("bat");
         tree.add("fox");
+        set.add("fox");
         tree.add("cat");
+        set.add("cat");
         tree.add("eel");
+        set.add("eel");
         tree.add("ant");
+        set.add("ant");
         System.out.println("Original Tree: " + tree);
 
         System.out.println("Path Tree: ");

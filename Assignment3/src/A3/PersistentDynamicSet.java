@@ -21,6 +21,7 @@ public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
 
     public void printPath() {
         ArrayList<BinaryTreeNode> path = new ArrayList<>();
+        this.printPathRecursive(rootNode, path);
     }
 
     public ArrayList<BinaryTreeNode> printPathRecursive(BinaryTreeNode root, ArrayList<BinaryTreeNode> path) {
@@ -35,7 +36,7 @@ public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
         if (root.getLeft() == null && root.getRight() == null) {
             path.forEach(node -> System.out.print(" " + node.getValue()));
             path.remove(path.size() - 1);
-            System.out.println("Root is found");
+            System.out.println("\nRoot is found");
 
             /*Not a leaf node, add this node to
         path and continue traverse */
