@@ -10,6 +10,7 @@ package A3;
  * @author Owner
  */
 import java.util.AbstractSet;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -240,6 +241,10 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         return replacementNode;
     }
 
+//    public void printPath(BinarySearchTreeGivenTemplate tree) {
+//        ArrayList<BinaryTreeNode> path = new ArrayList<>();
+//        PersistentDynamicSet.printPathRecursive(tree.getRoot(), path);
+//    }
     public Iterator<E> iterator() {
         return new BinaryTreeIterator(rootNode);
     }
@@ -379,7 +384,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         tree.add("ant");
         System.out.println("Original Tree: " + tree);
 
-        treeprintPath();
+        PersistentDynamicSet.printPath(tree);
 
         tree.remove("owl");
         tree.remove("cow");

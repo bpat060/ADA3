@@ -18,8 +18,7 @@ public class PersistentDynamicSet extends BinarySearchTreeGivenTemplate {
         this.printPathRecursive(tree.getRoot(), path);
     }
 
-    private void printPathRecursive(BinaryTreeNode root,
-            ArrayList<BinaryTreeNode> path) {
+    public void printPathRecursive(BinaryTreeNode root, ArrayList<BinaryTreeNode> path) {
         if (root == null) {
             return;
         }
