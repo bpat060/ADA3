@@ -9,6 +9,8 @@ package A3;
  *
  * @author Owner
  */
+import com.sun.jdi.Value;
+import java.awt.RenderingHints.Key;
 import java.util.AbstractSet;
 import java.util.Collection;
 import java.util.Comparator;
@@ -422,13 +424,26 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
     // left child and right child (no need for link to parent)
     protected class BinaryTreeNode {
 
-        public BinaryTreeNode leftChild, rightChild;
-        public E element;
+        public BinaryTreeNode leftChild, rightChild;// links to left and right subtrees
+        public E element;    //value
+        public boolean color;     // color of parent link
+        public int size;          // subtree count
+
+        public BinaryTreeNode(E element, boolean color, int size) {
+            this.element = element;
+            this.color = color;
+            this.size = size;
+        }
 
         public BinaryTreeNode(E element) {
             this.element = element;
             leftChild = null;
             rightChild = null;
+        }
+
+        //getting subtree count
+        public int getSize() {
+            return this.size;
         }
 
         //getting element
