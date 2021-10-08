@@ -377,19 +377,18 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
 
         // create an object of Scanner
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter 10 things into the binary tree: ");
-
-        for (int x = 1; x < 10; x++) {
-
+        System.out.println("Please enter 8 words into the binary tree: ");
+        //for loop for inputing a string into the tree
+        for (int x = 1; x < 9; x++) {
             System.out.println(x + ": ");
-
             // take input from the user
             String shape = input.next();
-
+            //add input to tree/s
             tree.add(shape);
             set.add(shape);
         }
 
+        //further testing of the tree for trial and error
         System.out.println("\nOriginal Tree: " + tree);
 
         System.out.println("Path Tree: ");
@@ -413,6 +412,7 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
         System.out.println("last element in subtree: " + subtree.last());
     }
 
+    //persistent set uses get root to get the root node.
     BinaryTreeNode getRoot() {
         return rootNode;
     }
@@ -431,26 +431,32 @@ public class BinarySearchTreeGivenTemplate<E> extends AbstractSet<E>
             rightChild = null;
         }
 
+        //getting element
         public E getValue() {
             return this.element;
         }
 
+        //getting right child
         public BinaryTreeNode getRight() {
             return this.rightChild;
         }
 
+        //getting left child
         public BinaryTreeNode getLeft() {
             return this.leftChild;
         }
 
+        //setting value
         public void setValue(E value) {
             this.element = value;
         }
 
+        //setting right child
         public void setRight(BinaryTreeNode node) {
             this.rightChild = node;
         }
 
+        //setting left child
         public void setLeft(BinaryTreeNode node) {
             this.leftChild = node;
         }
